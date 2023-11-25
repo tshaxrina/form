@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        outline: none;
+        text-decoration: none;
+    }
+   
+    form {
+        width: 10%;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    form div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+        position: relative;
+        transition: .5s ease;
+    }
+    form div input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #c4c4c4;
+    }
+    form div::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url("./error.svg");
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        top: 38px;
+        right: -25px;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+
+    form button {
+        padding: 10px;
+        border: 1px solid blue;
+        color: #fff;
+        border-radius: 8px;
+        background-color: blue;
+    }
+
+    .required input {
+        border-color: blue;
+    }
+
+    .error-field {
+        color: red !important;
+    }
+    .error-field input {
+        border-color: red !important;
+    }
+        
+    .error-field::after {
+        opacity: 1 !important;
+    }
+    form .elem {
+        display: flex;
+    }
+
+</style>
+</head>
+<body>
+    <form name="login" >
+
+        <h1>Example form</h1>
+
+        <div class="elem">
+            <div class="item">
+                <div class="required" >
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" > 
+                    <span class="error-text"></span>
+                </div>
+                <div>
+                    <label for="surname">surname</label>
+                    <input type="text" id="surname" name="surname" > 
+                    <span class="error-text"></span>
+                </div>
+                <div class="required" >
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email" > 
+                    <span class="error-text"></span>
+                </div>
+                <div>
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" > 
+                    <span class="error-text"></span>
+                </div>
+                <div>
+                    <label for="name">Mom's Name</label>
+                    <input type="text" id="name" name="name" > 
+                    <span class="error-text"></span>
+                </div>
+                <div>
+                    <label for="name">Dad's Name</label>
+                    <input type="text" id="name" name="name" > 
+                    <span class="error-text"></span>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="required" >
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="ade" > 
+                    <span class="error-text"></span>
+                </div>
+                <div class="required" >
+                    <label for="text">About you</label>
+                    <input type="text" id="text" name="text" > 
+                    <span class="error-text"></span>
+                </div>
+                <div class="required" >
+                    <label for="text">What is JavaScript?</label>
+                    <input type="text" id="text" name="text" > 
+                    <span class="error-text"></span>
+                </div>
+                <div class="required" >
+                    <label for="text">What is HTML?</label>
+                    <input type="text" id="text" name="text" > 
+                    <span class="error-text"></span>
+                </div>
+                <div class="required" >
+                    <label for="text">What is CSS?</label>
+                    <input type="text" id="text" name="text" > 
+                    <span class="error-text"></span>
+                </div>
+                <div >
+                    <label for="text">Your favourite car</label>
+                    <input type="text" id="text" name="text" > 
+                    <span class="error-text"></span>
+                </div>
+            </div>
+        </div>
+        
+
+        <button>Save changes</button>
+    </div>
+</form>     
+<script src="./script.js"></script>  
+</body>
+</html>
