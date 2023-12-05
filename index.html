@@ -12,28 +12,48 @@
         outline: none;
         text-decoration: none;
     }
-   
+    .item p {
+        color: var(--Grey-AAA, #595959);
+        font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+    h1 {
+        color: #000;
+font-family: Inter;
+font-size: 46px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+    }
     form {
-        width: 10%;
+        width: 15%;
         margin: 100px auto;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        
     }
     form div {
+        margin-top: 10px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
         gap: 10px;
         align-items: start;
         position: relative;
         transition: .5s ease;
     }
     form div input {
-        width: 100%;
-        padding: 10px;
+        /* width: 100%;
+        padding: 10px; */
+        display: flex; 
         border-radius: 8px;
         border: 1px solid #c4c4c4;
+padding: 20px 12px;
+justify-content: space-between;
+align-items: center;
+flex: 1 0 0;
+align-self: stretch;
+margin-bottom: 5px;
+margin-top: 5px;
     }
     form div::after {
         content: "";
@@ -43,7 +63,7 @@
         background-image: url("./error.svg");
         background-size: contain;
         background-position: center;
-        position: absolute;
+        position: absolute;                                 
         top: 38px;
         right: -25px;
         opacity: 0;
@@ -52,11 +72,27 @@
 
 
     form button {
-        padding: 10px;
-        border: 1px solid blue;
-        color: #fff;
-        border-radius: 8px;
-        background-color: blue;
+        display: flex;
+width: 277px;
+height: 59px;
+padding: 20px 12px;
+justify-content: space-between;
+align-items: center;
+flex-shrink: 0;
+border-radius: 4px;
+border: 2px solid #4200FF;
+background: #4200FF;
+color: #FFF;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 4px;
+border: 2px solid #4200FF;
+background: #4200FF;
+justify-content: center;
+margin: 15px;
     }
 
     .required input {
@@ -75,35 +111,59 @@
     }
     form .elem {
         display: flex;
+        gap: 55px;
     }
-
+    .item {
+        gap: 50px;
+    }
+    .info p {
+        color: var(--Text-Color, #1A1A1A);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    }
+    .info {
+        display: flex;
+        gap: 20px;
+    }
 </style>
 </head>
 <body>
     <form name="login" >
-
+        
         <h1>Example form</h1>
-
+        <div class="info">
+            <p>All: 12</p>
+            <p>Need: 7</p>
+            <p class="succes_counter">Success: 8/12</p>
+            <p class="error_counter">Error: 4/12</p>
+        </div>
         <div class="elem">
+
             <div class="item">
+
                 <div class="required" >
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" > 
                     <span class="error-text"></span>
                 </div>
                 <div>
-                    <label for="surname">surname</label>
-                    <input type="text" id="surname" name="surname" > 
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" name="surname" >
+                    <br> 
                     <span class="error-text"></span>
                 </div>
                 <div class="required" >
-                    <label for="email">email</label>
-                    <input type="email" id="email" name="email" > 
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" >
                     <span class="error-text"></span>
                 </div>
                 <div>
                     <label for="phone">Phone number</label>
                     <input type="tel" id="phone" name="phone" > 
+                    <br> 
                     <span class="error-text"></span>
                 </div>
                 <div>
@@ -120,14 +180,15 @@
 
 
             <div class="item">
+
                 <div class="required" >
                     <label for="age">Age</label>
-                    <input type="number" id="age" name="ade" > 
+                    <input type="number" id="age" name="ade" >
                     <span class="error-text"></span>
                 </div>
                 <div class="required" >
                     <label for="text">About you</label>
-                    <input type="text" id="text" name="text" > 
+                    <input type="text" id="text" name="text" >
                     <span class="error-text"></span>
                 </div>
                 <div class="required" >
@@ -153,10 +214,10 @@
             </div>
         </div>
         
-
-        <button>Save changes</button>
-    </div>
-</form>     
+        <center>
+        <button>Save changes</button> 
+    </center>
+</form>    
 <script src="./script.js"></script>  
 </body>
 </html>
